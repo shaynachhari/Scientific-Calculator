@@ -1,0 +1,82 @@
+body, html{
+    height: -webkit-fill-available;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.numbers{
+    width: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
+}
+.display{
+    height: 50px;
+    border: 1px solid gray;
+    /* width: 370px; */
+}
+.outer-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightblue;
+    width: fit-content;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #000000c4;
+    box-shadow: 0px 0px 21px 12px grey;
+}
+.operator{
+    display: flex;
+    flex-direction: column;
+}
+.outer-container{
+    display: grid;
+    grid-template-areas:
+        "display display display display"
+        "checkbox upperBox upperBox upperBox"
+        "trignoBox numberBox numberBox operatorBox"
+        "trignoBox numberBox numberBox operatorBox"
+        "trignoBox numberBox numberBox operatorBox";
+    grid-template-columns: 80px 70px 70px 80px;
+}
+
+#displayBox{
+    grid-area: display;
+    margin: 11px 0px;
+    border-radius: 5px;
+    background-color: #e0ffdf;
+}
+#checkbox{
+    grid-area: checkbox;
+}
+#upperBox{
+    grid-area: upperBox;
+}
+#numberBox{
+    grid-area: numberBox;
+}
+#operatorbox{
+    grid-area: operatorBox;
+}
+#trignoBox{
+    grid-area: trignoBox;
+    display: flex;
+    flex-direction: column;
+}
+
+.mybtn{
+    margin: 1px;
+    background-color: gray;
+    border: none;
+
+}
+
+.form-check-label{
+    font-size: 12px;
+}
